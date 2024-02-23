@@ -31,10 +31,14 @@
     </div>
     <button type="submit" class="btn btn-primary">Add Program</button>
   </form>
+  <br>
   <div *ngIf="displayAlert" class="alert alert-danger" role="alert">
     Program cannot end after 20:00. Please adjust the program duration or start time.
   </div>
   <div *ngIf="displayRoomAlert" class="alert alert-danger" role="alert">
     The selected room is not available during the given time interval. Please select another room or adjust the program time.
+  </div>
+  <div *ngIf="displayCapacityAlert" class="alert alert-danger" role="alert">
+    Program cannot be added. Program capacity is greater than the capacity of the selected room.
   </div>
 </div>

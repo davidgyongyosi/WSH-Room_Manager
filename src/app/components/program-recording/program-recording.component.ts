@@ -22,6 +22,7 @@ export class ProgramRecordingComponent implements OnInit {
   programStartTimes: string[] = [];
   displayAlert: boolean = false;
   displayRoomAlert: boolean = false;
+  displayCapacityAlert: boolean = false;
 
   constructor(public dataService: DataService) { }
 
@@ -45,10 +46,14 @@ export class ProgramRecordingComponent implements OnInit {
       this.resetProgram();
       return;
     }
-    console.log(this.selectedRoom);
+
     const isRoomAvailable = this.isRoomAvailable(this.selectedRoom, programStartTime, programEndTime);
     if (!isRoomAvailable) {
       this.displayRoomAlert = true;
+      return;
+    }
+    if(this.selectedRoom.capacity <= this.newProgram.capacity){
+      this.displayCapacityAlert = true;
       return;
     }
     this.dataService.addProgram(this.newProgram, this.selectedRoom);
