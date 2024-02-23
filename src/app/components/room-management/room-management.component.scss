@@ -1,0 +1,55 @@
+@import "../../../styles.scss";
+
+.container {
+    background-color: $background;
+    color: $text;
+    padding: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .btn-primary {
+    background-color: $primary;
+    border-color: $primary;
+  }
+  
+  .btn-primary:hover {
+    background-color: darken($primary, 10%);
+    border-color: darken($primary, 10%);
+  }
+  
+  .btn-danger {
+    background-color: $accent;
+    border-color: $accent;
+  }
+  
+  .btn-danger:hover {
+    background-color: darken($accent, 10%);
+    border-color: darken($accent, 10%);
+  }
+  
+  .table {
+    background-color: $background;
+    color: $text;
+  }
+  
+  .table th,
+  .table td {
+    border-color: lighten($text, 30%);
+  }
+  
+  .table th {
+    background-color: lighten($primary, 50%);
+    color: $text;
+  }
+  
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: lighten($background, 5%);
+  }
+  
+  .table-striped tbody tr:nth-of-type(even) {
+    background-color: $background;
+  }
+  

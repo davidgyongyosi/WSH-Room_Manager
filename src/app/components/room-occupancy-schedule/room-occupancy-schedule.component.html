@@ -1,0 +1,23 @@
+<div class="container">
+  <h2>Room Occupancy Schedule</h2>
+  
+  <div *ngFor="let room of rooms">
+    <h3>{{ room.name }}</h3>
+    <ul>
+      <li *ngFor="let program of room.programs" class="program-item">
+        <strong>{{ program.name }}</strong>
+        Starts: {{ program.startTime }} 
+        Duration: {{ program.duration }} hours
+      </li>
+    </ul>
+  </div>
+
+  <h3>External Programs</h3>
+  <ul>
+    <li *ngFor="let program of extPrograms" class="external-program program-item">
+      <strong>{{ program.name }}</strong>
+      Starts: {{ program.startTime }} 
+      Duration: {{ program.duration }} hours
+    </li>
+  </ul>
+</div>

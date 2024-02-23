@@ -1,0 +1,40 @@
+<div class="container">
+  <h2>Program Recording</h2>
+  
+  <form (ngSubmit)="addProgram()">
+    <div class="form-group">
+      <label for="programName">Program Name:</label>
+      <input type="text" class="form-control" id="programName" [(ngModel)]="newProgram.name" name="programName" required>
+    </div>
+    <div class="form-group">
+      <select class="form-control" id="programStartTime" [(ngModel)]="newProgram.startTime" name="programStartTime" required>
+        <option *ngFor="let time of programStartTimes" [value]="time">{{ time }}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="programDuration">Duration (hours):</label>
+      <input type="number" class="form-control" id="programDuration" [(ngModel)]="newProgram.duration" name="programDuration" required>
+    </div>
+    <div class="form-group">
+      <label for="programIsExternal">External Program:</label>
+      <input type="checkbox" class="form-check-input" id="programIsExternal" [(ngModel)]="newProgram.isExternal" name="programIsExternal">
+    </div>
+    <div class="form-group">
+      <label for="programCapacity">Expected Attendees:</label>
+      <input type="number" class="form-control" id="programCapacity" [(ngModel)]="newProgram.capacity" name="programCapacity" required>
+    </div>
+    <div class="form-group">
+      <label for="programRoom">Room:</label>
+      <select class="form-control" id="programRoom" [(ngModel)]="selectedRoom" name="programRoom" [disabled]="newProgram.isExternal">
+        <option *ngFor="let room of rooms" [ngValue]="room">{{ room.name }}</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Program</button>
+  </form>
+  <div *ngIf="displayAlert" class="alert alert-danger" role="alert">
+    Program cannot end after 20:00. Please adjust the program duration or start time.
+  </div>
+  <div *ngIf="displayRoomAlert" class="alert alert-danger" role="alert">
+    The selected room is not available during the given time interval. Please select another room or adjust the program time.
+  </div>
+</div>

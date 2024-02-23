@@ -1,0 +1,31 @@
+@import "../../../styles.scss";
+
+.container {
+    background-color: $background;
+    color: $text;
+    padding: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .btn-primary {
+    background-color: $primary;
+    border-color: $primary;
+  }
+  
+  .btn-primary:hover {
+    background-color: darken($primary, 10%);
+    border-color: darken($primary, 10%);
+  }
+  
+  .form-control {
+    background-color: lighten($background, 5%);
+    color: $text;
+  }
+  
+  .btn {
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,34 @@
+@import "../../../styles.scss";
+
+.container {
+    background-color: $background;
+    color: $text;
+    padding: 20px;
+  }
+  
+  h2 {
+    color: $primary;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  li span {
+    font-weight: bold;
+  }
+
+.program-item {
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.external-program {
+  background-color: #ffe0e0;
+}

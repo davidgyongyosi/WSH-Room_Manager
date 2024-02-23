@@ -1,0 +1,89 @@
+// Global colors
+$text: #0a0617;
+$background: #f8f7fd;
+$primary: #724bcc;
+$secondary: #dddd88;
+$accent: #78d874;
+
+/* Navigation bar styles */
+.navbar {
+  background-color: $primary;
+  color: $text;
+}
+
+.navbar-brand {
+  color: $text;
+}
+
+.nav-link {
+  color: $text;
+}
+
+.nav-link:hover {
+  color: lighten($text, 10%);
+}
+
+/* Form styles */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+/* Button styles */
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: $primary;
+  border-color: $primary;
+  color: $text;
+}
+
+.btn-primary:hover {
+  background-color: darken($primary, 10%);
+  border-color: darken($primary, 10%);
+}
+
+.btn-danger {
+  background-color: $accent;
+  border-color: $accent;
+  color: $text;
+}
+
+.btn-danger:hover {
+  background-color: darken($accent, 10%);
+  border-color: darken($accent, 10%);
+}
+
+/* Table styles */
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  background-color: $background;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid lighten($text, 30%);
+}
+
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid lighten($text, 30%);
+}
+
+.table tbody+tbody {
+  border-top: 2px solid lighten($text, 30%);
+}
+
+/* Container styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
