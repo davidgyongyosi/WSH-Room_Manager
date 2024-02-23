@@ -72,7 +72,7 @@ export class DataService {
       startTime: '10:00',
       duration: 2,
       isExternal: false,
-      capacity: 30
+      capacity: 20
     };
 
     const externalProgram: Program = {
